@@ -5,7 +5,7 @@ import { TrashSVG } from "@/components/trashSVG";
 import ClipBoard from "../../public/Clipboard.png";
 import styles from "./styles.module.scss";
 import Image from "next/image";
-
+import { GoCheckbox } from "react-icons/go";
 interface ITask {
     id: string;
     title: string;
@@ -97,6 +97,9 @@ export function Tasks() {
                                             checked={task.isCompleted}
                                             onChange={() => toggleTaskCompletion(task.id)}
                                         />
+                                        {task.isCompleted && (
+                                            <GoCheckbox className={styles.checkboxIcon} />
+                                        )}
                                         <div>
                                             <p className={task.isCompleted ? styles.completedTaskTitle : ''}>
                                                 {task.title}
@@ -125,6 +128,9 @@ export function Tasks() {
                                             checked={task.isCompleted}
                                             onChange={() => toggleTaskCompletion(task.id)}
                                         />
+                                        {task.isCompleted && (
+                                            <GoCheckbox className={styles.checkboxIcon} style={{ fill: '#0796D3' }} />
+                                        )}
                                         <div>
                                             <p className={task.isCompleted ? styles.completedTaskTitle : ''}>
                                                 {task.title}
@@ -156,7 +162,7 @@ export function Tasks() {
                                 </label>
                                 <div className={styles.modalActions}>
                                     <button type="button" onClick={closeModal}>Cancelar</button>
-                                    <button type="submit">Adicionar</button>
+                                    <button type="submit" disabled={!title}>Adicionar</button>
                                 </div>
                             </form>
                         </div>

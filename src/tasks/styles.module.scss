@@ -66,6 +66,30 @@
                     &:hover {
                         background-color: #F7F9FD;
                     }
+
+                    input:checked {
+                        background: #A0DCF6; 
+                        border: none;
+                    }
+                    
+                    input {
+                        appearance: none;
+                        position: relative;
+                        width: 25px;
+                        height: 20px;
+                        border: 1px solid #D7DDE9;
+                        border-radius: 4px;
+                    }
+                    
+                    .checkboxIcon {
+                        position: absolute;
+                        margin-left: -3px;
+                        width: 24px;
+                        height: 24px;
+                        color: #0796D3;
+                    
+                    }
+                    
                 
                     div {
                         margin-right: auto;
@@ -118,8 +142,6 @@
             }
         }
         
-
-
         .modalOverlay {
             position: fixed;
             top: 0;
@@ -131,6 +153,10 @@
             align-items: center;
             justify-content: center;
             z-index: 1000;
+            backdrop-filter: blur(5px); /* Efeito de blur */
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             .modal {
                 background-color: white;
@@ -196,6 +222,10 @@
                             background-color: #D7E1F5; 
                             color: #333333; 
                         }
+                    }
+
+                    button:last-child:disabled {
+                        cursor: not-allowed;
                     }
                 
                    
