@@ -1,0 +1,283 @@
+    .taskContainer {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+        
+        .tasks {
+            max-width: 450px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 1px solid #1018280D;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+
+            .noTasksMessage {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin-bottom: 24px;
+
+                h3 {
+                    margin-top: 24px;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 22.4px;
+                    color:#0000008A;
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22.4px;
+                    color:#0000008A;
+                }
+            }
+
+            .titleTasks {
+                color: #0000008A;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19.36px;
+                letter-spacing: -2%;
+                margin-bottom: 24px;
+            }
+
+            div {
+                width: 100%;
+
+                label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 16px;
+                    border: 1px dashed #D7DDE9;
+                    padding: 16px;
+                    border-radius: 8px;
+                    margin-bottom: 24px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease; 
+                
+                    &:hover {
+                        background-color: #F7F9FD;
+                    }
+                
+                    div {
+                        margin-right: auto;
+                
+                        p {
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 19.36px;
+                            letter-spacing: -2%;
+                        }
+                    }
+                    .removeTask {
+                        all: unset; 
+                        display: inline-block; 
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .completedTasks {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .completedTaskTitle {
+                text-decoration: line-through;
+                color: gray; 
+            }
+        }
+
+        .AddNewTaskButton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 450px;
+            height: 51px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: -2%;
+            color: #FFFFFF;
+            cursor: pointer;
+            background: linear-gradient(90deg, #0796D3 0%, #53C0F0 100%);
+            transition: background 0.3s ease; 
+        
+            &:hover {
+                background: linear-gradient(90deg, #53C0F0 0%, #0796D3 100%); 
+            }
+        }
+        
+
+
+        .modalOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+
+            .modal {
+                background-color: white;
+                padding: 24px;
+                border-radius: 8px;
+                width: 400px;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    
+                 h2 {
+                    margin-bottom: 32px;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 29.04px;
+                    letter-spacing: -2%;
+                }
+                
+                 form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+        
+                    label {
+                        display: flex;
+                        flex-direction: column;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19.36px;
+                        letter-spacing: -2%;
+    
+                        input {
+                            padding: 16px;
+                            border: 1px solid #ccc;
+                            border-radius: 8px;
+                            font-size: 16px;
+                            margin-top: 8px;
+                            outline: none;
+                        }
+                    }
+                }
+                .modalActions {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 8px;
+    
+                    button {
+                       padding: 16px 24px;
+                       border: none;
+                       border-radius: 8px;
+                       flex: 1;
+                       cursor: pointer;
+                       font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19.36px;
+                        letter-spacing: -2%;
+                   }
+                   
+                   button:first-child {
+                        background-color: #E7EEFB;
+                        color: #000000;
+                        transition: background-color 0.3s ease, color 0.3s ease; 
+                    
+                        &:hover {
+                            background-color: #D7E1F5; 
+                            color: #333333; 
+                        }
+                    }
+                
+                   
+                    button:last-child {
+                         background-color: #ccc;
+                        color: #FFFFFF;
+                        background: linear-gradient(90deg, #0796D3 0%, #53C0F0 100%);
+                        transition: background 0.3s ease; 
+                    
+                        &:hover {
+                            background: linear-gradient(90deg, #53C0F0 0%, #0796D3 100%); 
+                        }
+                   }
+                }
+            }
+
+            .removeModal {
+                background-color: white;
+                padding: 24px;
+                border-radius: 8px;
+                width: 400px;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    
+                 h2 {
+                    margin-bottom: 32px;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 29.04px;
+                    letter-spacing: -2%;
+                }
+                
+                p {
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -2%;
+                    color: #0000008A;
+                    white-space: nowrap;
+                }
+
+                .removeModalActions {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 8px;
+                    margin-top: 32px;
+    
+                    button {
+                       padding: 16px 24px;
+                       border: none;
+                       border-radius: 8px;
+                       flex: 1;
+                       cursor: pointer;
+                       font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19.36px;
+                        letter-spacing: -2%;
+                   }
+                   
+                   button:first-child {
+                        background-color: #E7EEFB;
+                        color: #000000;
+                        transition: background-color 0.3s ease, color 0.3s ease; 
+                    
+                        &:hover {
+                            background-color: #D7E1F5; 
+                            color: #333333; 
+                        }
+                    }
+                
+                   
+                    button:last-child {
+                         background-color: #ccc;
+                        color: #FFFFFF;
+                        background: linear-gradient(90deg, #D30707 0%, #F05353 100%);
+                        transition: background 0.3s ease; 
+                    
+                        &:hover {
+                            background: linear-gradient(90deg, #F05353 0%, #D30707 100%); 
+                        }
+                   }
+                }
+                
+            }
+        }        
+    }
