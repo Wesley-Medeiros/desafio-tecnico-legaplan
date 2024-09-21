@@ -88,7 +88,6 @@ export function Tasks() {
                             <p>Crie tarefas e organize seus itens a fazer</p>
                         </div>
                     ) : (
-                        <>
                             <div>
                                 {pendingTasks.map((task) => (
                                     <label key={task.id}>
@@ -107,14 +106,12 @@ export function Tasks() {
                                         </div>
                                         <button
                                             className={styles.removeTask}
-                                            onClick={() => openConfirmModal(task.id)}
-                                        >
+                                            onClick={() => openConfirmModal(task.id)}>
                                             <TrashSVG />
                                         </button>
                                     </label>
                                 ))}
                             </div>
-                        </>
                     )}
 
                     {completedTasks.length > 0 && (

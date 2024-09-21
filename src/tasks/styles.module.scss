@@ -304,69 +304,45 @@
         }        
     }
 
-    @media only screen and (min-width: 768px) and (max-width: 1024px){
-        @media (max-width: 1024px) {
-            .modal {
-                height: 100vh;
-                width: 100vw !important; 
-
-                .modalActions {
-                    flex-direction: column-reverse;
-                }
-            }
-
-            .removeModal {
-                height: 100vh;
-                width: 100vw !important;
-                flex: 1;
-
-                .removeModalActions {
-                    flex-direction: column-reverse;
-                }
-            }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .modal, .removeModal {
+            height: 100vh;
+            width: 100vw !important; 
+        }
+    
+        .modalActions, .removeModalActions {
+            flex-direction: column-reverse;
         }
     }
-
-    @media only screen and (max-width: 500px){
-        @media (max-width: 500px) {
-            .tasks {
-                width: 275px !important;
-                .noTasksMessage {
-                    h3 {
-                        font-weight: 500;
-                        font-size: 16px;
-                        line-height: 19.36px;
-                        margin-top: 8px;
-                        margin-bottom: 8px;
-                    }
-                }
-
-                input {
-                    width: 33px !important;
-                }
+    
+    @media only screen and (max-width: 500px) {
+        .tasks {
+            width: 275px !important;
+    
+            .noTasksMessage h3 {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19.36px;
+                margin-top: 8px;
+                margin-bottom: 8px;
             }
-
-            .AddNewTaskButton {
-                width: 272px !important;
+    
+            input {
+                width: 33px !important;
             }
-            .modal {
-                height: 100vh;
-                width: 100vw !important; 
-
-                .modalActions {
-                    flex-direction: column-reverse;
-                }
-            }
-
-            .removeModal {
-                height: 100vh;
-                width: 100vw !important;
-                flex: 1;
-
-                .removeModalActions {
-                    flex-direction: column-reverse;
-                }
-            }
+        }
+    
+        .AddNewTaskButton {
+            width: 272px !important;
+        }
+    
+        .modal, .removeModal {
+            height: 100vh;
+            width: 100vw !important;
+        }
+    
+        .modalActions, .removeModalActions {
+            flex-direction: column-reverse;
         }
     }
     
