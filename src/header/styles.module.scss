@@ -1,20 +1,40 @@
 .header {
     padding: 24px 56px;
 
+    @media only screen and (max-width: 1024px) {
+        div {
+            align-items: flex-start !important;
+            flex-direction: column;
+    
+            h1 {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19.36px;
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+    
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19.36px;
+            }
+        }
+    }
+
     div {
         display: flex;
         align-items: center;
         border-bottom: 1px solid #D7DDE9;
         justify-content: space-between;
-        flex: 1;
-        margin-bottom: 0; 
-        padding-bottom: 24px; 
+        margin-bottom: 0;
+        padding-bottom: 24px;
 
         h1 {
             font-weight: 500;
             font-size: 24px;
             line-height: 29.04px;
-            letter-spacing: -2%;
+            white-space: nowrap;
         }
 
         p {
@@ -22,7 +42,36 @@
             font-size: 16px;
             line-height: 19.36px;
             color: #0000008A;
-            letter-spacing: -2%;
+            white-space: nowrap;
+        }
+    }
+}
+
+/* Media Query para telas menores que 1024px */
+@media only screen and (max-width: 1024px) {
+    .header {
+        /* Adicione qualquer estilo específico para telas menores que 1024px aqui */
+    }
+}
+
+/* Media Query para telas menores que 450px */
+@media only screen and (max-width: 450px) {
+    .header div {
+        align-items: flex-start;
+        flex-direction: column;
+
+        h1 {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19.36px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19.36px;
         }
     }
 }

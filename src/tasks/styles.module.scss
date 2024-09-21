@@ -6,7 +6,7 @@
         
         .tasks {
             max-width: 450px;
-            width: 100%;
+            width: 450px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -44,7 +44,6 @@
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 19.36px;
-                letter-spacing: -2%;
                 margin-bottom: 24px;
             }
 
@@ -98,7 +97,6 @@
                             font-weight: 400;
                             font-size: 16px;
                             line-height: 19.36px;
-                            letter-spacing: -2%;
                         }
                     }
                     .removeTask {
@@ -170,7 +168,6 @@
                     font-weight: 500;
                     font-size: 24px;
                     line-height: 29.04px;
-                    letter-spacing: -2%;
                 }
                 
                  form {
@@ -184,7 +181,6 @@
                         font-weight: 400;
                         font-size: 16px;
                         line-height: 19.36px;
-                        letter-spacing: -2%;
     
                         input {
                             padding: 16px;
@@ -210,7 +206,6 @@
                        font-weight: 500;
                         font-size: 16px;
                         line-height: 19.36px;
-                        letter-spacing: -2%;
                    }
                    
                    button:first-child {
@@ -254,14 +249,12 @@
                     font-weight: 500;
                     font-size: 24px;
                     line-height: 29.04px;
-                    letter-spacing: -2%;
                 }
                 
                 p {
                     font-weight: 300;
                     font-size: 16px;
                     line-height: 24px;
-                    letter-spacing: -2%;
                     color: #0000008A;
                     white-space: nowrap;
                 }
@@ -281,7 +274,6 @@
                        font-weight: 500;
                         font-size: 16px;
                         line-height: 19.36px;
-                        letter-spacing: -2%;
                    }
                    
                    button:first-child {
@@ -311,3 +303,71 @@
             }
         }        
     }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px){
+        @media (max-width: 1024px) {
+            .modal {
+                height: 100vh;
+                width: 100vw !important; 
+
+                .modalActions {
+                    flex-direction: column-reverse;
+                }
+            }
+
+            .removeModal {
+                height: 100vh;
+                width: 100vw !important;
+                flex: 1;
+
+                .removeModalActions {
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 500px){
+        @media (max-width: 500px) {
+            .tasks {
+                width: 275px !important;
+                .noTasksMessage {
+                    h3 {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19.36px;
+                        margin-top: 8px;
+                        margin-bottom: 8px;
+                    }
+                }
+
+                input {
+                    width: 33px !important;
+                }
+            }
+
+            .AddNewTaskButton {
+                width: 272px !important;
+            }
+            .modal {
+                height: 100vh;
+                width: 100vw !important; 
+
+                .modalActions {
+                    flex-direction: column-reverse;
+                }
+            }
+
+            .removeModal {
+                height: 100vh;
+                width: 100vw !important;
+                flex: 1;
+
+                .removeModalActions {
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+    }
+    
+    
