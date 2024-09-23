@@ -6,6 +6,7 @@ import ClipBoard from "../../public/Clipboard.png";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import { GoCheckbox } from "react-icons/go";
+import { Button } from "@/components/button";
 interface ITask {
     id: string;
     title: string;
@@ -146,7 +147,7 @@ export function Tasks() {
                     )}
                 </div>
 
-                <button className={styles.AddNewTaskButton} onClick={openModal}>Adicionar nova tarefa</button>
+                <Button onClick={openModal} variant="primary">Adicionar nova tarefa</Button>
 
                 {isModalOpen && (
                     <div className={styles.modalOverlay}>
@@ -158,8 +159,8 @@ export function Tasks() {
                                     <input onChange={onChangeTitle} value={title} type="text" placeholder="Digite" />
                                 </label>
                                 <div className={styles.modalActions}>
-                                    <button type="button" onClick={closeModal}>Cancelar</button>
-                                    <button type="submit" disabled={!title}>Adicionar</button>
+                                    <Button onClick={closeModal}>Cancelar</Button>
+                                    <Button variant="primary" type="submit" disabled={!title}>Adicionar</Button>
                                 </div>
                             </form>
                         </div>
@@ -172,8 +173,8 @@ export function Tasks() {
                             <h2>Deletar tarefa</h2>
                             <p>Tem certeza que você deseja deletar essa tarefa?</p>
                             <div className={styles.removeModalActions}>
-                                <button onClick={closeConfirmModal}>Cancelar</button>
-                                <button onClick={removeTask}>Deletar</button>
+                                <Button onClick={closeConfirmModal}>Cancelar</Button>
+                                <Button variant="danger" onClick={removeTask}>Adicionar</Button>
                             </div>
                         </div>
                     </div>
