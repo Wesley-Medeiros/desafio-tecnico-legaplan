@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📜Teste técnico Legaplan
+Desenvolvimento de uma aplicação ToDoList.
 
-## Getting Started
+<table>
+  <tr>
+    <td valign="top"><img src="https://github.com/user-attachments/assets/39ae47b8-4855-40d5-a3af-ffbe7935d363"/></td>
+    <td valign="top"><img src="https://github.com/user-attachments/assets/8168b612-d02c-418b-ae90-43743c174f04"/></td>
+  </tr>
+</table>
 
-First, run the development server:
+<table>
+  <tr>
+    <td valign="top"><img src="https://github.com/user-attachments/assets/a3ac82b0-a5e5-421d-be13-8a418f08695a"/></td>
+    <td valign="top"><img src="https://github.com/user-attachments/assets/e4385ac7-bde2-47f7-b795-ba7e07e965c0"/></td>
+  </tr>
+</table>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<table>
+  <tr>
+    <td valign="top">
+      <img src="https://github.com/user-attachments/assets/2da0fcac-3ef6-4bfa-b0a4-63ecc3d4d8de"/>
+    </td>
+    <td valign="top"><img src="https://github.com/user-attachments/assets/84a8eb87-c5f8-4f07-956e-c428c50df625"/></td>
+  </tr>
+</table>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+##  🚀 *Tecnologias*
+*Este projeto foi desenvolvido com as seguintes tecnologias:*
+ - NextJs
+ - SCSS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Obrigatório
 
-## Learn More
+- NextJs ✅;
+- Typescript ✅;
+- SCSS ✅;
+- Responsividade ✅;
 
-To learn more about Next.js, take a look at the following resources:
+## :arrow_right: Como Usar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    # Clone o repositório.
+    $ git clonehttps://github.com/Wesley-Medeiros/desafio-tecnico-legaplan.git
+    
+    # Entrar dentro da pasta clonada.
+    $ cd desafio-tecnico-legaplan
+    
+    # Instalando depedências.
+    $ npm install
+    
+    # Rodando
+    $ npm run start
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##   📝AUTOR
+[@Wesley-Medeiros](https://github.com/Wesley-Medeiros/)
