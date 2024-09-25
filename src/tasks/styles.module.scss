@@ -8,120 +8,6 @@
             max-width: 450px;    
         }
         
-        .tasks {
-            width: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            border: 1px solid #1018280D;
-            border-radius: 16px;
-            padding: 32px;
-            margin-bottom: 24px;
-
-            .noTasksMessage {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                margin-bottom: 24px;
-
-                h3 {
-                    margin-top: 24px;
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 22.4px;
-                    color:#0000008A;
-                }
-
-                p {
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 22.4px;
-                    color:#0000008A;
-                }
-            }
-
-            .titleTasks {
-                color: #0000008A;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 19.36px;
-                margin-bottom: 24px;
-            }
-
-            div {
-                width: 100%;
-
-                label {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    gap: 16px;
-                    border: 1px dashed #D7DDE9;
-                    padding: 16px;
-                    border-radius: 8px;
-                    margin-bottom: 24px;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease; 
-                
-                    &:hover {
-                        background-color: #F7F9FD;
-                    }
-
-                    input:checked {
-                        background: #A0DCF6; 
-                        border: none;
-                    }
-                    
-                    input {
-                        appearance: none;
-                        position: relative;
-                        width: 25px;
-                        height: 20px;
-                        border: 1px solid #D7DDE9;
-                        border-radius: 4px;
-                    }
-                    
-                    .checkboxIcon {
-                        position: absolute;
-                        margin-left: -3px;
-                        width: 24px;
-                        height: 24px;
-                        color: #0796D3;
-                    
-                    }
-                    
-                
-                    div {
-                        margin-right: auto;
-                
-                        p {
-                            font-weight: 400;
-                            font-size: 16px;
-                            line-height: 19.36px;
-                        }
-                    }
-                    .removeTask {
-                        all: unset; 
-                        display: inline-block; 
-                        cursor: pointer;
-                    }
-                }
-            }
-
-            .completedTasks {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-            }
-
-            .completedTaskTitle {
-                text-decoration: line-through;
-                color: gray; 
-            }
-        }
-        
         .modalOverlay {
             position: fixed;
             top: 0;
@@ -266,6 +152,7 @@
         .taskContainer {
             button {
                 max-width: 275px;
+                width: 100% !important;
             }
 
             .tasks {
