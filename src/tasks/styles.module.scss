@@ -121,27 +121,6 @@
                 color: gray; 
             }
         }
-
-        .AddNewTaskButton {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 450px;
-            height: 51px;
-            border: none;
-            border-radius: 8px;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: -2%;
-            color: #FFFFFF;
-            cursor: pointer;
-            background: linear-gradient(90deg, #0796D3 0%, #53C0F0 100%);
-            transition: background 0.3s ease; 
-        
-            &:hover {
-                background: linear-gradient(90deg, #53C0F0 0%, #0796D3 100%); 
-            }
-        }
         
         .modalOverlay {
             position: fixed;
@@ -266,43 +245,8 @@
                     display: flex;
                     justify-content: flex-end;
                     gap: 8px;
-                    margin-top: 32px;
-    
-                    button {
-                       padding: 16px 24px;
-                       border: none;
-                       border-radius: 8px;
-                       flex: 1;
-                       cursor: pointer;
-                       font-weight: 500;
-                        font-size: 16px;
-                        line-height: 19.36px;
-                   }
-                   
-                   button:first-child {
-                        background-color: #E7EEFB;
-                        color: #000000;
-                        transition: background-color 0.3s ease, color 0.3s ease; 
-                    
-                        &:hover {
-                            background-color: #D7E1F5; 
-                            color: #333333; 
-                        }
-                    }
-                
-                   
-                    button:last-child {
-                         background-color: #ccc;
-                        color: #FFFFFF;
-                        background: linear-gradient(90deg, #D30707 0%, #F05353 100%);
-                        transition: background 0.3s ease; 
-                    
-                        &:hover {
-                            background: linear-gradient(90deg, #F05353 0%, #D30707 100%); 
-                        }
-                   }
+                    margin-top: 32px;    
                 }
-                
             }
         }        
     }
@@ -319,33 +263,35 @@
     }
     
     @media only screen and (max-width: 500px) {
-        .tasks {
-            width: 275px !important;
-    
-            .noTasksMessage h3 {
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 19.36px;
-                margin-top: 8px;
-                margin-bottom: 8px;
+        .taskContainer {
+            button {
+                max-width: 275px;
             }
-    
-            input {
-                width: 33px !important;
+
+            .tasks {
+                width: 275px;
+        
+                .noTasksMessage h3 {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19.36px;
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+                }
+        
+                input {
+                    width: 33px !important;
+                }
             }
-        }
-    
-        .AddNewTaskButton {
-            width: 272px !important;
-        }
-    
-        .modal, .removeModal {
-            height: 100vh;
-            width: 100vw !important;
-        }
-    
-        .modalActions, .removeModalActions {
-            flex-direction: column-reverse;
+        
+            .modal, .removeModal {
+                height: 100vh;
+                width: 100vw !important;
+            }
+        
+            .modalActions, .removeModalActions {
+                flex-direction: column-reverse;
+            }
         }
     }
     

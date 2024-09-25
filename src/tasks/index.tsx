@@ -174,7 +174,7 @@ export function Tasks() {
                             <p>Tem certeza que você deseja deletar essa tarefa?</p>
                             <div className={styles.removeModalActions}>
                                 <Button onClick={closeConfirmModal}>Cancelar</Button>
-                                <Button variant="danger" onClick={removeTask}>Adicionar</Button>
+                                <Button variant="danger" onClick={removeTask}>Remover</Button>
                             </div>
                         </div>
                     </div>
