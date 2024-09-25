@@ -1,0 +1,92 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal {
+        background-color: white;
+        padding: 24px;
+        border-radius: 8px;
+        width: 400px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+         h2 {
+            margin-bottom: 32px;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29.04px;
+        }
+        
+         form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            label {
+                display: flex;
+                flex-direction: column;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19.36px;
+
+                input {
+                    padding: 16px;
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    margin-top: 8px;
+                    outline: none;
+                }
+            }
+        }
+        .modalActions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+
+            button {
+               padding: 16px 24px;
+               border: none;
+               border-radius: 8px;
+               flex: 1;
+               cursor: pointer;
+               font-weight: 500;
+                font-size: 16px;
+                line-height: 19.36px;
+           }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .modal, .removeModal {
+        height: 100vh;
+        width: 100vw !important; 
+    }
+
+    .modalActions, .removeModalActions {
+        flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+        .modal {
+            height: 100vh;
+            width: 100vw !important;
+        }
+    
+        .modalActions {
+            flex-direction: column-reverse;
+        }
+    }

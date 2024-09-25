@@ -1,8 +1,10 @@
 'use client';
 
-import { TaskList } from "../components/taskList"; // Importando o novo arquivo
+import { TaskList } from "../components/taskList"; 
 import { Button } from "@/components/button";
 import { useTaskContext } from "../context/task-context";
+import { AddTaskModal } from "../components/AddTaskModal"; 
+import { ConfirmRemoveTaskModal } from "../components/ConfirmRemoveTaskModal"; 
 import styles from "./styles.module.scss";
 
 export function Tasks() {
@@ -21,40 +23,24 @@ export function Tasks() {
     return (
         <main>
             <div className={styles.taskContainer}>
-                <TaskList />
+                <div className={styles.taskList}>
+                    <TaskList />
+                    <Button onClick={openModal} variant="primary">Adicionar nova tarefa</Button>
+                </div>
 
-                <Button onClick={openModal} variant="primary">Adicionar nova tarefa</Button>
+                <AddTaskModal 
+                    isOpen={isModalOpen} 
+                    title={title} 
+                    onChangeTitle={onChangeTitle} 
+                    handleSubmit={handleSubmit} 
+                    closeModal={closeModal} 
+                />
 
-                {isModalOpen && (
-                    <div className={styles.modalOverlay}>
-                        <div className={styles.modal}>
-                            <h2>Nova Tarefa</h2>
-                            <form onSubmit={handleSubmit}>
-                                <label>
-                                    Titulo
-                                    <input onChange={onChangeTitle} value={title} type="text" placeholder="Digite" />
-                                </label>
-                                <div className={styles.modalActions}>
-                                    <Button onClick={closeModal}>Cancelar</Button>
-                                    <Button variant="primary" type="submit" disabled={!title}>Adicionar</Button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                )}
-
-                {isConfirmModalOpen && (
-                    <div className={styles.modalOverlay}>
-                        <div className={styles.removeModal}>
-                            <h2>Deletar tarefa</h2>
-                            <p>Tem certeza que você deseja deletar essa tarefa?</p>
-                            <div className={styles.removeModalActions}>
-                                <Button onClick={closeConfirmModal}>Cancelar</Button>
-                                <Button variant="danger" onClick={removeTask}>Remover</Button>
-                            </div>
-                        </div>
-                    </div>
-                )}
+                <ConfirmRemoveTaskModal 
+                    isOpen={isConfirmModalOpen} 
+                    closeConfirmModal={closeConfirmModal} 
+                    removeTask={removeTask} 
+                />
             </div>
         </main>
     );

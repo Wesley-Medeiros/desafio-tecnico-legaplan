@@ -4,140 +4,12 @@
         justify-content: center;
         flex-direction: column;
 
-        button {
-            max-width: 450px;    
+        .taskList {
+            max-width: 450px;
         }
-        
-        .modalOverlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            backdrop-filter: blur(5px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    }        
 
-            .modal {
-                background-color: white;
-                padding: 24px;
-                border-radius: 8px;
-                width: 400px;
-                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    
-                 h2 {
-                    margin-bottom: 32px;
-                    font-weight: 500;
-                    font-size: 24px;
-                    line-height: 29.04px;
-                }
-                
-                 form {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 16px;
-        
-                    label {
-                        display: flex;
-                        flex-direction: column;
-                        font-weight: 400;
-                        font-size: 16px;
-                        line-height: 19.36px;
-    
-                        input {
-                            padding: 16px;
-                            border: 1px solid #ccc;
-                            border-radius: 8px;
-                            font-size: 16px;
-                            margin-top: 8px;
-                            outline: none;
-                        }
-                    }
-                }
-                .modalActions {
-                    display: flex;
-                    justify-content: flex-end;
-                    gap: 8px;
-    
-                    button {
-                       padding: 16px 24px;
-                       border: none;
-                       border-radius: 8px;
-                       flex: 1;
-                       cursor: pointer;
-                       font-weight: 500;
-                        font-size: 16px;
-                        line-height: 19.36px;
-                   }
-                   
-                   button:first-child {
-                        background-color: #E7EEFB;
-                        color: #000000;
-                        transition: background-color 0.3s ease, color 0.3s ease; 
-                    
-                        &:hover {
-                            background-color: #D7E1F5; 
-                            color: #333333; 
-                        }
-                    }
-
-                    button:last-child:disabled {
-                        cursor: not-allowed;
-                    }
-                
-                   
-                    button:last-child {
-                         background-color: #ccc;
-                        color: #FFFFFF;
-                        background: linear-gradient(90deg, #0796D3 0%, #53C0F0 100%);
-                        transition: background 0.3s ease; 
-                    
-                        &:hover {
-                            background: linear-gradient(90deg, #53C0F0 0%, #0796D3 100%); 
-                        }
-                   }
-                }
-            }
-
-            .removeModal {
-                background-color: white;
-                padding: 24px;
-                border-radius: 8px;
-                width: 400px;
-                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    
-                 h2 {
-                    margin-bottom: 32px;
-                    font-weight: 500;
-                    font-size: 24px;
-                    line-height: 29.04px;
-                }
-                
-                p {
-                    font-weight: 300;
-                    font-size: 16px;
-                    line-height: 24px;
-                    color: #0000008A;
-                    white-space: nowrap;
-                }
-
-                .removeModalActions {
-                    display: flex;
-                    justify-content: flex-end;
-                    gap: 8px;
-                    margin-top: 32px;    
-                }
-            }
-        }        
-    }
-
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @media only screen and (max-width: 1024px) {
         .modal, .removeModal {
             height: 100vh;
             width: 100vw !important; 
@@ -150,10 +22,6 @@
     
     @media only screen and (max-width: 500px) {
         .taskContainer {
-            button {
-                max-width: 275px;
-                width: 100% !important;
-            }
 
             .tasks {
                 width: 275px;
